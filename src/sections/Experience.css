@@ -1,0 +1,215 @@
+.experience {
+    min-height: auto;
+
+    padding: 100px 10%;
+}
+
+
+/* Timeline */
+
+.experience-timeline {
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+/* Vertical line */
+
+.experience-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #e5e5e5;
+}
+
+
+/* Timeline item */
+
+.experience-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 20px 1fr;
+
+    gap: 30px;
+
+    padding-bottom: 60px;
+}
+
+
+/* Marker */
+
+.timeline-marker {
+    position: relative;
+
+    z-index: 2;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    margin-top: 5px;
+}
+
+
+.timeline-marker span {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    top: 6px;
+    left: 6px;
+}
+
+
+/* Content */
+
+.experience-content {
+    padding-bottom: 20px;
+}
+
+
+.experience-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.experience-header h3 {
+    font-size: 26px;
+
+    margin-bottom: 8px;
+}
+
+
+.experience-header h4 {
+    font-size: 17px;
+
+    font-weight: 500;
+
+    color: #666;
+}
+
+
+/* Meta */
+
+.experience-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 8px;
+}
+
+
+.experience-meta span {
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+/* Responsibilities */
+
+.experience-responsibilities h5,
+.experience-achievement h5 {
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.experience-responsibilities ul {
+    padding-left: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.experience-responsibilities li {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 8px;
+}
+
+
+/* Achievement */
+
+.experience-achievement {
+    padding: 20px;
+
+    border-left: 3px solid #222;
+
+    background: #f7f7f7;
+}
+
+
+.experience-achievement p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+/* Mobile styling */
+
+@media (max-width: 768px) {
+
+    .experience {
+        padding: 80px 7%;
+    }
+
+
+    .experience-header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .experience-meta {
+        align-items: flex-start;
+
+        flex-direction: row;
+
+        gap: 15px;
+    }
+
+
+    .experience-header h3 {
+        font-size: 22px;
+    }
+
+
+    .experience-item {
+        gap: 20px;
+    }
+
+}

@@ -1,0 +1,96 @@
+.home {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.home-content {
+  max-width: 850px;
+}
+
+.home-greeting {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.home h1 {
+  font-size: clamp(50px, 8vw, 90px);
+  line-height: 1.05;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.home h2 {
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.home-intro {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.home-buttons a {
+  text-decoration: none;
+  padding: 13px 25px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background: #222;
+  color: white;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  border: 1px solid #222;
+  color: #222;
+}
+
+.secondary-button:hover {
+  background: #222;
+
+  color: white;
+}
+
+/* Mobile styling */
+
+@media (max-width: 768px) {
+  .home {
+    padding: 60px 7%;
+  }
+
+  .home-greeting {
+    font-size: 18px;
+  }
+
+  .home-intro {
+    font-size: 16px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-buttons a {
+    text-align: center;
+  }
+}
