@@ -48,7 +48,7 @@ const education = [
         certificates: [
             {
                 name: "IBM Certificate",
-                image: "certificates/Arya IBM Master in Full Stack Web Development with Java (IT Vedant).pdf"
+                image: "/certificates/Arya IBM Master in Full Stack Web Development with Java (IT Vedant).pdf"
             },
             {
                 name: "NSDC / Skill India Certificate",

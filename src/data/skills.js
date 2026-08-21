@@ -1,97 +1,161 @@
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaBootstrap,
+  FaJava,
+  FaGitAlt,
+  FaGithub,
+  FaServer,
+  FaKey,
+} from "react-icons/fa";
+
+import {
+  SiMui,
+  SiSpringboot,
+  SiSpringsecurity,
+  SiMysql,
+  SiAxios,
+  SiVercel,
+  SiRazorpay,
+} from "react-icons/si";
+
 const skills = [
-    {
-        name: "HTML",
-        category: "Frontend",
-        level: "Advanced",
-        percentage: 90
-    },
-    {
-        name: "CSS",
-        category: "Frontend",
-        level: "Advanced",
-        percentage: 85
-    },
-    {
-        name: "JavaScript",
-        category: "Frontend",
-        level: "Intermediate",
-        percentage: 80
-    },
-    {
-        name: "React.js",
-        category: "Frontend",
-        level: "Intermediate",
-        percentage: 75
-    },
-    {
-        name: "Bootstrap",
-        category: "Frontend",
-        level: "Intermediate",
-        percentage: 75
-    },
-    {
-        name: "Material UI",
-        category: "Frontend",
-        level: "Beginner",
-        percentage: 50
-    },
+  /* ========================================
+     FRONTEND
+  ======================================== */
 
-    {
-        name: "Java",
-        category: "Backend",
-        level: "Advanced",
-        percentage: 85
-    },
-    {
-        name: "Spring Boot",
-        category: "Backend",
-        level: "Intermediate",
-        percentage: 70
-    },
-    {
-        name: "Spring Security",
-        category: "Backend",
-        level: "Intermediate",
-        percentage: 65
-    },
-    {
-        name: "REST APIs",
-        category: "Backend",
-        level: "Intermediate",
-        percentage: 75
-    },
+  {
+    name: "HTML",
+    category: "Frontend",
+    percentage: 90,
+    icon: FaHtml5,
+  },
 
-    {
-        name: "MySQL",
-        category: "Database",
-        level: "Advance",
-        percentage: 85
-    },
+  {
+    name: "CSS",
+    category: "Frontend",
+    percentage: 85,
+    icon: FaCss3Alt,
+  },
 
-    {
-        name: "Git",
-        category: "Tools",
-        level: "Beginner",
-        percentage: 40
-    },
-    {
-        name: "GitHub",
-        category: "Tools",
-        level: "Beginner",
-        percentage: 55
-    },
-    {
-        name: "Axios",
-        category: "Tools",
-        level: "Intermediate",
-        percentage: 80
-    },
-    {
-        name: "Vercel",
-        category: "Tools",
-        level: "Intermediate",
-        percentage: 85
-    }
+  {
+    name: "JavaScript",
+    category: "Frontend",
+    percentage: 85,
+    icon: FaJs,
+  },
+
+  {
+    name: "React.js",
+    category: "Frontend",
+    percentage: 85,
+    icon: FaReact,
+  },
+
+  {
+    name: "Bootstrap",
+    category: "Frontend",
+    percentage: 80,
+    icon: FaBootstrap,
+  },
+
+  {
+    name: "Material UI",
+    category: "Frontend",
+    percentage: 75,
+    icon: SiMui,
+  },
+
+  /* ========================================
+     BACKEND
+  ======================================== */
+
+  {
+    name: "Java",
+    category: "Backend",
+    percentage: 85,
+    icon: FaJava,
+  },
+
+  {
+    name: "Spring Boot",
+    category: "Backend",
+    percentage: 80,
+    icon: SiSpringboot,
+  },
+
+  {
+    name: "Spring Security",
+    category: "Backend",
+    percentage: 70,
+    icon: SiSpringsecurity,
+  },
+
+  {
+    name: "REST APIs",
+    category: "Backend",
+    percentage: 75,
+    icon: FaServer,
+  },
+
+  {
+    name: "JWT Authentication",
+    category: "Backend",
+    percentage: 70,
+    icon: FaKey,
+  },
+
+  /* ========================================
+     DATABASE
+  ======================================== */
+
+  {
+    name: "MySQL",
+    category: "Database",
+    percentage: 80,
+    icon: SiMysql,
+  },
+
+  /* ========================================
+     TOOLS
+  ======================================== */
+
+  {
+    name: "Git",
+    category: "Tools",
+    percentage: 75,
+    icon: FaGitAlt,
+  },
+
+  {
+    name: "GitHub",
+    category: "Tools",
+    percentage: 75,
+    icon: FaGithub,
+  },
+
+  {
+    name: "Axios",
+    category: "Tools",
+    percentage: 80,
+    icon: SiAxios,
+  },
+
+  {
+    name: "Vercel",
+    category: "Tools",
+    percentage: 70,
+    icon: SiVercel,
+  },
+
+  {
+    name: "Razorpay API",
+    category: "Tools",
+    percentage: 65,
+    icon: SiRazorpay,
+  },
 ];
 
 export default skills;

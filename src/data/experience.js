@@ -12,7 +12,9 @@ const experience = [
         ],
 
         learning:
-            "Gained practical experience working with frontend technologies and understanding how web development projects are handled in a professional environment."
+            "Gained practical experience working with frontend technologies and understanding how web development projects are handled in a professional environment.",
+
+        certificate: "/certificates/internship-certificate.pdf"
     }
 ];
 

@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-logo">ARYA</div>
+        <div className="navbar-logo">ARYA VAIRAGARE</div>
 
         {/* Desktop Navigation */}
         <div className="desktop-nav">

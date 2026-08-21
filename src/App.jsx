@@ -23,7 +23,6 @@ function App() {
                 <Education />
                 <Resume />
                 <Contact />
-
             </main>
         </>
     );
