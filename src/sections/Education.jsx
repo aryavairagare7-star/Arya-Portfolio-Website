@@ -5,13 +5,13 @@ function Education() {
   return (
     <section id="education" className="education">
       <div className="section-heading">
-        <p>My academic journey</p>
+        <p>My academic & professional journey</p>
 
-        <h2>Education</h2>
+        <h2>Education & Training</h2>
       </div>
 
       <div className="education-timeline">
-        {/* Animated central line */}
+        {/* Central timeline */}
 
         <div className="timeline-line">
           <div className="timeline-line-progress"></div>
@@ -30,8 +30,36 @@ function Education() {
 
               <p>{item.description}</p>
 
-              {item.cgpa && (
-                <div className="education-cgpa">CGPA: {item.cgpa}</div>
+              {item.score && (
+                <div className="education-score">
+                  <span>{item.scoreLabel}</span>
+
+                  <strong>{item.score}</strong>
+                </div>
+              )}
+
+              {item.certificates?.length > 0 && (
+                <div className="education-certificates">
+                  <h5>Certificates</h5>
+
+                  <div className="certificate-list">
+                    {item.certificates.map((certificate) => (
+                      <a
+                        href={certificate.image}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="certificate-link"
+                        key={certificate.name}
+                      >
+                        <span>📜</span>
+
+                        <span>{certificate.name}</span>
+
+                        <span>↗</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
               )}
             </div>
 

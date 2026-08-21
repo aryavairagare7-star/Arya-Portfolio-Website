@@ -17,12 +17,14 @@
     letter-spacing: 2px;
     font-weight: 600;
     margin-bottom: 8px;
+    color: var(--primary);
 }
 
 
 .section-heading h2 {
     font-size: 48px;
     font-weight: 800;
+    color: var(--text-primary);
 }
 
 
@@ -121,6 +123,7 @@
 
     .section-heading h2 {
         font-size: 40px;
+        color: var(--text-primary);
     }
 
 

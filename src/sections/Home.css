@@ -1,96 +1,267 @@
 .home {
+  position: relative;
+
   min-height: calc(100vh - 70px);
+
   display: flex;
+
   align-items: center;
-  padding: 80px 10%;
+
+  padding: 100px 10%;
+
+  overflow: hidden;
+
+  background: var(--bg-primary);
 }
 
+/* Content */
+
 .home-content {
+  position: relative;
+
+  z-index: 2;
+
   max-width: 850px;
 }
 
+/* Greeting */
+
 .home-greeting {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: 500;
+  margin-bottom: 15px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: var(--primary);
+
+  letter-spacing: 1px;
 }
+
+/* Name */
 
 .home h1 {
-  font-size: clamp(50px, 8vw, 90px);
-  line-height: 1.05;
-  font-weight: 800;
-  margin-bottom: 15px;
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: var(--text-primary);
 }
+
+/* Colored part of name */
+
+.home h1 span {
+  display: block;
+
+  padding-bottom: 10px;
+
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Profession */
 
 .home h2 {
-  font-size: clamp(24px, 4vw, 38px);
+  margin-bottom: 22px;
+
+  font-size: clamp(24px, 3vw, 38px);
+
   font-weight: 600;
-  margin-bottom: 25px;
+
+  color: var(--text-secondary);
 }
+
+/* Introduction */
 
 .home-intro {
-  max-width: 650px;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #666;
+  max-width: 600px;
+
   margin-bottom: 35px;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: var(--text-secondary);
 }
 
-.home-buttons {
+/* Buttons */
+
+.home-actions {
   display: flex;
+
+  align-items: center;
+
   gap: 15px;
 }
 
-.home-buttons a {
+/* Primary button */
+
+.home-primary-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 22px;
+
+  border-radius: 7px;
+
+  background: var(--primary);
+
+  color: #fff;
+
   text-decoration: none;
-  padding: 13px 25px;
-  border-radius: 6px;
-  font-size: 15px;
+
+  font-size: 14px;
+
   font-weight: 600;
-  transition: all 0.3s ease;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.primary-button {
-  background: #222;
-  color: white;
-}
-
-.primary-button:hover {
+.home-primary-button:hover {
   transform: translateY(-3px);
+
+  background: var(--secondary);
+
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
 }
 
-.secondary-button {
-  border: 1px solid #222;
-  color: #222;
+.home-primary-button span {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
 }
 
-.secondary-button:hover {
-  background: #222;
-
-  color: white;
+.home-primary-button:hover span {
+  transform: translateX(4px);
 }
 
-/* Mobile styling */
+/* Secondary button */
+
+.home-secondary-button {
+  padding: 13px 21px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 7px;
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.home-secondary-button:hover {
+  border-color: var(--primary);
+
+  color: var(--primary);
+
+  background: var(--bg-accent);
+}
+
+/* ========================================
+   BACKGROUND GLOWS
+======================================== */
+
+.home-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+
+  opacity: 0.18;
+}
+
+/* Blue glow */
+
+.home-glow-one {
+  width: 400px;
+
+  height: 400px;
+
+  top: -150px;
+
+  right: 5%;
+
+  background: var(--primary);
+}
+
+/* Violet glow */
+
+.home-glow-two {
+  width: 350px;
+
+  height: 350px;
+
+  bottom: -150px;
+
+  right: 25%;
+
+  background: var(--secondary);
+}
+
+/* ========================================
+   MOBILE
+======================================== */
 
 @media (max-width: 768px) {
   .home {
-    padding: 60px 7%;
+    min-height: calc(100vh - 60px);
+
+    padding: 80px 7%;
   }
 
-  .home-greeting {
-    font-size: 18px;
+  .home h1 {
+    font-size: clamp(48px, 14vw, 75px);
+
+    letter-spacing: -3px;
+  }
+
+  .home h2 {
+    font-size: 24px;
   }
 
   .home-intro {
-    font-size: 16px;
+    font-size: 15px;
   }
 
-  .home-buttons {
-    flex-direction: column;
-    align-items: flex-start;
+  .home-actions {
+    flex-wrap: wrap;
   }
 
-  .home-buttons a {
-    text-align: center;
+  .home-glow-one {
+    width: 250px;
+
+    height: 250px;
+
+    right: -100px;
+  }
+
+  .home-glow-two {
+    width: 220px;
+
+    height: 220px;
+
+    right: -80px;
   }
 }

@@ -6,6 +6,8 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Education from "./sections/Education";
+import Resume from "./sections/Resume";
+import Contact from "./sections/Contact";
 
 function App() {
     return (
@@ -19,14 +21,8 @@ function App() {
                 <Projects />
                 <Experience />
                 <Education />
-
-                <section id="resume">
-                    <h1>Resume</h1>
-                </section>
-
-                <section id="contact">
-                    <h1>Contact</h1>
-                </section>
+                <Resume />
+                <Contact />
 
             </main>
         </>
