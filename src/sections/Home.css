@@ -14,7 +14,9 @@
   background: var(--bg-primary);
 }
 
-/* Content */
+/* ========================================
+   CONTENT
+======================================== */
 
 .home-content {
   position: relative;
@@ -24,7 +26,9 @@
   max-width: 850px;
 }
 
-/* Greeting */
+/* ========================================
+   GREETING
+======================================== */
 
 .home-greeting {
   margin-bottom: 15px;
@@ -38,33 +42,59 @@
   letter-spacing: 1px;
 }
 
-/* Name */
+/* ========================================
+   NAME
+======================================== */
 
 .home h1 {
-  font-size: clamp(55px, 8vw, 100px);
-  line-height: 1;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 12px;
+
+  width: max-content;
+
+  max-width: 100%;
+
+  margin-bottom: 15px;
+
   color: var(--text-primary);
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: 1px;
+
+  white-space: nowrap;
 }
 
 /* Colored part of name */
 
 .home h1 span {
-  display: block;
+  display: inline;
 
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 
   background: linear-gradient(90deg, var(--primary), var(--secondary));
 
   -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
+
   background-clip: text;
 }
 
-/* Profession */
+/* ========================================
+   PROFESSION
+======================================== */
 
-.home h2 {
+.home-profession {
+  min-height: 46px;
+
   margin-bottom: 22px;
 
   font-size: clamp(24px, 3vw, 38px);
@@ -72,9 +102,13 @@
   font-weight: 600;
 
   color: var(--text-secondary);
+
+  white-space: nowrap;
 }
 
-/* Introduction */
+/* ========================================
+   INTRODUCTION
+======================================== */
 
 .home-intro {
   max-width: 600px;
@@ -88,7 +122,9 @@
   color: var(--text-secondary);
 }
 
-/* Buttons */
+/* ========================================
+   BUTTONS
+======================================== */
 
 .home-actions {
   display: flex;
@@ -232,13 +268,19 @@
   }
 
   .home h1 {
-    font-size: clamp(48px, 14vw, 75px);
+    gap: 8px;
 
-    letter-spacing: -3px;
+    font-size: clamp(38px, 11vw, 60px);
+
+    letter-spacing: -1px;
   }
 
-  .home h2 {
+  .home-profession {
     font-size: 24px;
+
+    min-height: 35px;
+
+    white-space: normal;
   }
 
   .home-intro {
@@ -263,5 +305,23 @@
     height: 220px;
 
     right: -80px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 450px) {
+  .home h1 {
+    font-size: 39px;
+
+    gap: 6px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .home-profession {
+    font-size: 22px;
   }
 }
