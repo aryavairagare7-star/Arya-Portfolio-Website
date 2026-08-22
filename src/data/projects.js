@@ -37,7 +37,7 @@ const projects = [
       "Razorpay",
     ],
 
-    video: "/videos/water-delivery.mp4",
+    video: "/videos/water-delivery.png",
 
     liveLink: null,
 

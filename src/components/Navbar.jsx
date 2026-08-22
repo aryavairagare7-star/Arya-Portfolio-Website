@@ -3,6 +3,9 @@ import "./Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   const navItems = [
     "Home",
@@ -14,6 +17,13 @@ function Navbar() {
     "Resume",
     "Contact",
   ];
+
+  // Apply theme
+  useEffect(() => {
+    document.body.classList.toggle("dark", darkMode);
+
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
 
   // Prevent background scrolling when sidebar is open
   useEffect(() => {
@@ -28,12 +38,12 @@ function Navbar() {
     setMenuOpen(false);
   };
 
+  const toggleTheme = () => {
+    setDarkMode((current) => !current);
+  };
+
   return (
     <>
-      {/* ================================
-          NAVBAR
-      ================================= */}
-
       <nav className="navbar">
         {/* Logo */}
 
@@ -49,6 +59,18 @@ function Navbar() {
               {item}
             </a>
           ))}
+
+          {/* Theme Toggle */}
+
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={
+              darkMode ? "Switch to light mode" : "Switch to dark mode"
+            }
+          >
+            <span>{darkMode ? "☀" : "☾"}</span>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -65,18 +87,14 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* ================================
-          MOBILE OVERLAY
-      ================================= */}
+      {/* Mobile Overlay */}
 
       <div
         className={`sidebar-overlay ${menuOpen ? "show" : ""}`}
         onClick={closeMenu}
       ></div>
 
-      {/* ================================
-          MOBILE SIDEBAR
-      ================================= */}
+      {/* Mobile Sidebar */}
 
       <aside
         className={`mobile-sidebar ${menuOpen ? "open" : ""}`}
@@ -111,7 +129,6 @@ function Navbar() {
               }}
             >
               <span>0{index + 1}</span>
-
               {item}
             </a>
           ))}
@@ -121,6 +138,14 @@ function Navbar() {
 
         <div className="sidebar-footer">
           <p>Java Full Stack Developer</p>
+
+          {/* Mobile Theme Toggle */}
+
+          <button className="mobile-theme-toggle" onClick={toggleTheme}>
+            <span>{darkMode ? "☀" : "☾"}</span>
+
+            {darkMode ? "Light Mode" : "Dark Mode"}
+          </button>
         </div>
       </aside>
     </>
