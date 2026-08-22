@@ -5,10 +5,10 @@ import {
   FaReact,
   FaBootstrap,
   FaJava,
-  FaGitAlt,
   FaGithub,
   FaServer,
   FaKey,
+  FaAws,
 } from "react-icons/fa";
 
 import {
@@ -19,6 +19,7 @@ import {
   SiAxios,
   SiVercel,
   SiRazorpay,
+  SiMongodb,
 } from "react-icons/si";
 
 const skills = [
@@ -29,42 +30,42 @@ const skills = [
   {
     name: "HTML",
     category: "Frontend",
-    percentage: 90,
+    percentage: 85,
     icon: FaHtml5,
   },
 
   {
     name: "CSS",
     category: "Frontend",
-    percentage: 85,
+    percentage: 75,
     icon: FaCss3Alt,
   },
 
   {
     name: "JavaScript",
     category: "Frontend",
-    percentage: 85,
+    percentage: 80,
     icon: FaJs,
   },
 
   {
     name: "React.js",
     category: "Frontend",
-    percentage: 85,
+    percentage: 70,
     icon: FaReact,
   },
 
   {
     name: "Bootstrap",
     category: "Frontend",
-    percentage: 80,
+    percentage: 60,
     icon: FaBootstrap,
   },
 
   {
     name: "Material UI",
     category: "Frontend",
-    percentage: 75,
+    percentage: 50,
     icon: SiMui,
   },
 
@@ -82,7 +83,7 @@ const skills = [
   {
     name: "Spring Boot",
     category: "Backend",
-    percentage: 80,
+    percentage: 75,
     icon: SiSpringboot,
   },
 
@@ -114,8 +115,15 @@ const skills = [
   {
     name: "MySQL",
     category: "Database",
-    percentage: 80,
+    percentage: 85,
     icon: SiMysql,
+  },
+
+  {
+    name: "MongoDB",
+    category: "Database",
+    percentage: 30,
+    icon: SiMongodb,
   },
 
   /* ========================================
@@ -123,16 +131,16 @@ const skills = [
   ======================================== */
 
   {
-    name: "Git",
+    name: "AWS",
     category: "Tools",
-    percentage: 75,
-    icon: FaGitAlt,
+    percentage: 30,
+    icon: FaAws,
   },
 
   {
     name: "GitHub",
     category: "Tools",
-    percentage: 75,
+    percentage: 50,
     icon: FaGithub,
   },
 

@@ -14,7 +14,7 @@ function About() {
 
         <div className="about-image">
           <div className="about-image-wrapper">
-            <img src="/images/arya-profile.jpg" alt="Arya Vairagare" />
+            <img src="/photo/Arya Linkedin1.jpg" alt="Arya Vairagare" />
 
             <div className="about-image-decoration"></div>
           </div>
